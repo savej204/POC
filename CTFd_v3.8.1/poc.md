@@ -13,14 +13,14 @@
 
 <img width="1004" height="475" alt="image" src="https://github.com/user-attachments/assets/8386d5ba-4b3d-4e40-b119-89cf2ecae6c0" />
 
-- Lần theo ```backup``` value ta thấy có một đoạn để etract file hoạt động như sau:
+- Lần theo ```backup``` value ta thấy có một đoạn để extract file hoạt động như sau:
 
 <img width="1045" height="416" alt="image" src="https://github.com/user-attachments/assets/1521d1ff-de6d-4cd1-b35d-92b503d223d5" />
 
   ```
   1. files value sẽ là 1 array chứa các filename nếu nằm trong uploads folder
   2. Trong loop thì filename = f.split(os.sep, 1)
-    -> [uploads/banner.jpg] -> ['uploads','banner.jpg'] -> BYPASS -> [uploads//tmp/pwned] -> filename[1] = pwned
+    -> [uploads/banner.jpg] -> ['uploads','banner.jpg'] -> BYPASS -> [uploads//tmp/pwned] -> filename[1] = /tmp/pwned
       *os.sep hiểu đại loại là nó lấy ký tự đại diện phân cách trong filesystem
   3. Gọi hàm get_uploader trong utils(uploads) sau đó gọi store func để thực hiện tiếp công việc
   ````
